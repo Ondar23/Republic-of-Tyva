@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Республика Тыва</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+        #info p {
+            line-height: 1.4;
+        
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+
+        h2 {
+            color: #333;
+            font-family: Arial, sans-serif;
+            border-bottom: 2px solid #DDD; 
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body onclick="closeMenu(event)">
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип Республика Тыва">
+            <h1>Республика Тыва</h1>
+        </div>        
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" onclick="closeMenu(event)">Главная</a></li>
+            <li><a href="history.html" target="_self" onclick="closeMenu(event)">История</a></li>
+            <li><a href="culture.html" target="_self" onclick="closeMenu(event)">Культура</a></li>
+            <li><a href="symbols.html" target="_self" onclick="closeMenu(event)">Символика, гимн</a></li>
+            <li><a href="population.html" target="_self" onclick="closeMenu(event)">Население</a></li>
+            <li><a href="administration.html" target="_self" onclick="closeMenu(event)">Административно-территориальное деление</a></li>
+            <li><a href="sights.html" target="_self" onclick="closeMenu(event)">Достопримечательности</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div id="info">
+                <div>
+                    <h2>Символика и гимн</h2>
+                    <p class="first">Республика Тыва имеет богатую символику, отражающую национальную идентичность и культурное наследие региона.</p>
+                    
+                    <h3>Герб</h3>
+                    <p>Герб Тывы изображает круг, внутри которого находится белая лошадь на фоне гор, символизирующих Саянский хребет. Лошадь олицетворяет свободу, независимость и движение.</p>
+                    <img src="images/9.png" alt="Республика Тыва" />
+                    <h3>Флаг</h3>
+                    <p>Флаг Республики Тыва состоит из трех цветов: голубого, белого и золотого. Голубой символизирует небо, золото — процветание, а белый — чистоту и мир.</p>
+                    <img src="images/10.webp" alt="Республика Тыва" />
+                    <h3>Гимн</h3>
+                    <p>Гимн Республики Тыва звучит величественно, отражая традиционную музыку и вдохновляющую мелодию. Композитор: К. Танова, автор слов: О. Суюнчап.</p>
+                    <p>Гимн:</p>
+                    <p align="center">"Мен - тыва мен"</p>
+                    <div style="margin-bottom: 40px;"></div>
+                    <p align="center">Арт-арттың оваазынга</p>
+                    <p align="center">Дажын салып чалбарган</p>
+                    <p align="center">Таңды, Саян ыдыынга</p>
+                    <p align="center">Агын өргээн тыва мен.</p>
+                    <div style="margin-bottom: 40px;"></div>
+                    <p align="center">Мен – тыва мен</p>
+                    <p align="center">Мөңге харлыг дагның оглу мен.</p>
+                    <p align="center">Мен – тыва мен,</p>
+                    <p align="center">Мөңгүн суглуг чурттуң төлу мен.</p>
+                    <div style="margin-bottom: 40px;"></div>
+                    <p align="center">Өгбелерим чуртунда</p>
+                    <p align="center">Өлчей тарып иженген,</p>
+                    <p align="center">Өткүт хөөмей ырынга</p>
+                    <p align="center">Өөрүп талаан тыва мен.</p>
+                    <div style="margin-bottom: 40px;"></div>
+                    <p align="center">Мен – тыва мен</p>
+                    <p align="center">Мөңге харлыг дагның оглу мен.</p>
+                    <p align="center">Мен – тыва мен,</p>
+                    <p align="center">Мөңгүн суглуг чурттуң төлу мен.</p>
+                    <div style="margin-bottom: 40px;"></div>
+                    <p align="center">Аймак чоннар бүлези</p>
+                    <p align="center">Акы-дуңма найыралдыг,</p>
+                    <p align="center">Депшилгеже чүткүлдүг</p>
+                    <p align="center">Демниг чурттуг тыва мен.</p>
+                    <div style="margin-bottom: 40px;"></div>
+                    <p align="center">Мен – тыва мен</p>
+                    <p align="center">Мөңге харлыг дагның оглу мен.</p>
+                    <p align="center">Мен – тыва мен,</p>
+                    <p align="center">Мөңгүн суглуг чурттуң төлу мен.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Республика Тыва. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu(event) {
+            const nav = document.getElementById('nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

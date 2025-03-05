@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Республика Тыва</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+        #info p {
+            line-height: 1.4; 
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+        
+    </style>
+</head>
+<body onclick="closeMenu(event)">
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип Республика Тыва">
+            <h1>Республика Тыва</h1>
+        </div>        
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" onclick="closeMenu(event)">Главная</a></li>
+            <li><a href="history.html" target="_self" onclick="closeMenu(event)">История</a></li>
+            <li><a href="culture.html" target="_self" onclick="closeMenu(event)">Культура</a></li>
+            <li><a href="symbols.html" target="_self" onclick="closeMenu(event)">Символика, гимн</a></li>
+            <li><a href="population.html" target="_self" onclick="closeMenu(event)">Население</a></li>
+            <li><a href="administration.html" target="_self" onclick="closeMenu(event)">Административно-территориальное деление</a></li>
+            <li><a href="sights.html" target="_self" onclick="closeMenu(event)">Достопримечательности</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div id="info">
+                <div>
+                    <h2>Административно-территориальное деление</h2>
+                    <p>Республика Тыва делится на 17 кожуунов (районов) и город Кызыл, который является столицей региона. Каждый кожуун имеет свою административную единицу и местные власти. Таким образом, административная структура Тувы позволяет эффективно управлять территорией и обеспечивает доступность услуг для каждого жителя.</p>
+
+                    <h3>Список кожуунов</h3>
+                    <ul>
+                        <li>Барун-Хемчикский кожуун</li>
+                        <li>Бай-Тайгинский кожуун</li>
+                        <li>Каа-Хемский кожуун</li>
+                        <li>Кызылский кожуун</li>
+                        <li>Монгун-Тайгинский кожуун</li>
+                        <li>Пий-Хемский кожуун</li>
+                        <li>Сут-Хольский кожуун</li>
+                        <li>Тандинский кожуун</li>
+                        <li>Тес-Хемский кожуун</li>
+                        <li>Тоджинский кожуун</li>
+                        <li>Чаа-Хольский кожуун</li>
+                        <li>Чеди-Хольский кожуун</li>
+                        <li>Эрзинский кожуун</li>
+                        <li>Овюрский кожуун</li>
+                        <li>Кара-Хемский кожуун</li>
+                        <li>Улуг-Хемский кожуун</li>
+                        <li>Дзун-Хемчикский кожуун</li>
+                    </ul>
+                    <div style="margin-bottom: 40px;"></div>
+                    <img src="images/12.png" alt="Республика Тыва" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Республика Тыва. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu(event) {
+            const nav = document.getElementById('nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

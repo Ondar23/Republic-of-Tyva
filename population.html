@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Республика Тыва</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px;
+        } 
+        #info p {
+            line-height: 1.4; 
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+        .table-demography {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table-demography th, .table-demography td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table-demography th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onclick="closeMenu(event)">
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип Республика Тыва">
+            <h1>Республика Тыва</h1>
+        </div>        
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" onclick="closeMenu(event)">Главная</a></li>
+            <li><a href="history.html" target="_self" onclick="closeMenu(event)">История</a></li>
+            <li><a href="culture.html" target="_self" onclick="closeMenu(event)">Культура</a></li>
+            <li><a href="symbols.html" target="_self" onclick="closeMenu(event)">Символика, гимн</a></li>
+            <li><a href="population.html" target="_self" onclick="closeMenu(event)">Население</a></li>
+            <li><a href="administration.html" target="_self" onclick="closeMenu(event)">Административно-территориальное деление</a></li>
+            <li><a href="sights.html" target="_self" onclick="closeMenu(event)">Достопримечательности</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div id="info">
+                <div>
+                    <h2>Население</h2>
+        <p>Численность населения республики Тыва по данным Росстата составляет 337 544 чел. (2024). Плотность населения — 2,00 чел./км2 (2024). Городское население — 54,6 % (2022).</p>
+        <img src="images/11.jpg" alt="Республика Тыва" />
+        
+        <h2>Динамика численности населения</h2>
+            <table class="table-demography">
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Численность населения</th>
+                        <th>Прирост/Убыль</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2010</td>
+                        <td>307 930</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>319 500</td>
+                        <td>+11 570</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>329 300</td>
+                        <td>+9 800</td>
+                    </tr>
+                    <tr>
+                        <td>2024</td>
+                        <td>337 544</td>
+                        <td>+8 244</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Национальный состав</h2>
+            <p>Республика Тыва отличается уникальным национальным составом. Основные категории населения представлены ниже:</p>
+            <ul>
+                <li><strong>Тувинцы:</strong> 82% (коренное население региона).</li>
+                <li><strong>Русские:</strong> 16%.</li>
+                <li><strong>Представители других национальностей:</strong> 2% (хакасы, буряты и др.).</li>
+            </ul>
+
+            <h2>Демографические показатели</h2>
+            <ul>
+                <li><strong>Плотность населения:</strong> 2,00 чел./км².</li>
+                <li><strong>Городское население:</strong> 54,6%.</li>
+                <li><strong>Сельское население:</strong> 45,4%.</li>
+                <li><strong>Средний возраст населения:</strong> 29 лет.</li>
+            </ul>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Республика Тыва. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu(event) {
+            const nav = document.getElementById('nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>  

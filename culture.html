@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Республика Тыва</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 400px; 
+            height: auto;
+            margin-right: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        #info p {
+            line-height: 1.4; 
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: #333;
+            font-family: Arial, sans-serif;
+            border-bottom: 2px solid #DDD; 
+            padding-bottom: 10px;
+        }
+        main {
+            margin: 0 10%; 
+        }
+        footer {
+            text-align: center; 
+            margin-top: 30px; 
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body onclick="closeMenu(event)">
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип Республика Тыва">
+            <h1>Республика Тыва</h1>
+        </div>        
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" onclick="closeMenu(event)">Главная</a></li>
+            <li><a href="history.html" target="_self" onclick="closeMenu(event)">История</a></li>
+            <li><a href="culture.html" target="_self" onclick="closeMenu(event)">Культура</a></li>
+            <li><a href="symbols.html" target="_self" onclick="closeMenu(event)">Символика, гимн</a></li>
+            <li><a href="population.html" target="_self" onclick="closeMenu(event)">Население</a></li>
+            <li><a href="administration.html" target="_self" onclick="closeMenu(event)">Административно-территориальное деление</a></li>
+            <li><a href="sights.html" target="_self" onclick="closeMenu(event)">Достопримечательности</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="culture">
+            <div id="info">
+                <img src="images/8.jpg" alt="Культура Тывы">
+                <div>
+                    <h2>Культура</h2>
+                    <p class="first">Республика Тыва известна своей уникальной культурой, сочетающей элементы кочевого прошлого и современных традиций. <strong>Тувинская культура</strong> глубоко вплетена в жизнь местного населения.</p>
+                    
+                    <p><strong>Горловое пение</strong> (Хөөмей) стало визитной карточкой Тывы. Этот уникальный музыкальный стиль включает невероятное владение голосом, которое вызывает восхищение по всему миру.</p>
+                    
+                    <p>Также среди культурных ценностей можно выделить традиционную одежду, украшенную национальными узорами, а также самобытные обряды и фестивали, такие как <strong>Наадым</strong>, где проходят гонки на лошадях, борьба и стрельба из лука.</p>
+                    
+                    <p>Неотъемлемой частью культуры является духовность — шаманизм и буддизм гармонично сосуществуют в этом регионе, формируя уникальные ритуалы и мировоззрение.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h3>Дополнительные факты</h3>
+                <ul>
+                    <li>Тува — одно из немногих мест в мире, где до сих пор сохранились элементы шаманских практик.</li>
+                    <li>Национальные музыкальные инструменты, такие как игил, используются в традиционной музыке.</li>
+                    <li>Местная кухня, включая блюда из баранины, сыра и молочных продуктов, отражает кочевые обычаи.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Республика Тыва. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu(event) {
+            const nav = document.getElementById('nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

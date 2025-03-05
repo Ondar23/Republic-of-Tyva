@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Республика Тыва</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+        #info p {
+            line-height: 1.4; 
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+        .sight-item {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+        }
+        .sight-item h3 {
+            margin-top: 0;
+        }
+        .sight-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .sight-item p {
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+        
+    </style>
+</head>
+<body onclick="closeMenu(event)">
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип Республика Тыва">
+            <h1>Республика Тыва</h1>
+        </div>        
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" onclick="closeMenu(event)">Главная</a></li>
+            <li><a href="history.html" target="_self" onclick="closeMenu(event)">История</a></li>
+            <li><a href="culture.html" target="_self" onclick="closeMenu(event)">Культура</a></li>
+            <li><a href="symbols.html" target="_self" onclick="closeMenu(event)">Символика, гимн</a></li>
+            <li><a href="population.html" target="_self" onclick="closeMenu(event)">Население</a></li>
+            <li><a href="administration.html" target="_self" onclick="closeMenu(event)">Административно-территориальное деление</a></li>
+            <li><a href="sights.html" target="_self" onclick="closeMenu(event)">Достопримечательности</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Топ 10 достопримечательностей</h2>
+            
+            <div class="sight-item">
+                <h3>Тубтен Шедруб Линг</h3>
+                <img src="images/13.jfif" alt="Тубтен Шедруб Линг">
+                <p>Буддийский монастырь, известный своей духовной атмосферой и богатой культурной историей.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Дус-Холь (Соленое озеро)</h3>
+                <img src="images/14.webp" alt="Дус-Холь">
+                <p>Уникальное природное место с целебными свойствами, популярное среди туристов.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Устуу-Хурээ</h3>
+                <img src="images/15.jfif" alt="Устуу-Хурээ">
+                <p>Древний буддийский храм, восстановленный после разрушений. Это значимый объект культурного и духовного наследия Тувы.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Золотые пески Ийме</h3>
+                <img src="images/16.jpg" alt="Золотые пески Ийме">
+                <p>Необычная пустынная локация с песчаными дюнами, которые создают удивительные пейзажи.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Кижи Кожээ</h3>
+                <img src="images/17.jfif" alt="Кижи Кожээ">
+                <p>Живописное ущелье с богатой природой и уникальными скальными образованиями.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Уттуг-Хая</h3>
+                <img src="images/18.jfif" alt="Уттуг-Хая">
+                <p>Священная гора, окруженная легендами и являющаяся местом паломничества для многих жителей региона.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Долина Царей</h3>
+                <img src="images/19.jfif" alt="Долина Царей">
+                <p>Археологический памятник с захоронениями скифских времен, являющийся важной частью древней истории Тувы.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Монгун-Тайга</h3>
+                <img src="images/20.webp" alt="Монгун-Тайга">
+                <p>Высочайшая точка Тувы и соседних регионов, пеший туризм к которой особенно популярен среди горных любителей.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Заповедник «Убсунурская котловина»</h3>
+                <img src="images/21.webp" alt="Заповедник Убсунурская котловина ">
+                <p> Это замкнутый бессточный бассейн озера Убсу-Нур, окружённый горами. Расположена на трансграничной территории, на южной границе Тувы и северо-западной Монголии.</p>
+            </div>
+            
+            <div class="sight-item">
+                <h3>Государственный природный заповедник «Азас»</h3>
+                <img src="images/22.jfif" alt="Государственный природный заповедник Азас">
+                <p>Уникальный заповедник с разнообразием флоры и фауны, расположенный в экологически чистом районе Тувы.</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Республика Тыва. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu(event) {
+            const nav = document.getElementById('nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html> 

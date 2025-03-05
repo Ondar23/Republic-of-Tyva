@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Республика Тыва</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+        #info p {
+            line-height: 1.4; 
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+        
+    </style>
+</head>
+<body onclick="closeMenu(event)">
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип Республика Тыва">
+            <h1>Республика Тыва</h1>
+        </div>        
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" onclick="closeMenu(event)">Главная</a></li>
+            <li><a href="history.html" target="_self" onclick="closeMenu(event)">История</a></li>
+            <li><a href="culture.html" target="_self" onclick="closeMenu(event)">Культура</a></li>
+            <li><a href="symbols.html" target="_self" onclick="closeMenu(event)">Символика, гимн</a></li>
+            <li><a href="population.html" target="_self" onclick="closeMenu(event)">Население</a></li>
+            <li><a href="administration.html" target="_self" onclick="closeMenu(event)">Административно-территориальное деление</a></li>
+            <li><a href="sights.html" target="_self" onclick="closeMenu(event)">Достопримечательности</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div id="info">
+                <div>
+                    <h2>История</h2>
+        <p>История Республики Тыва насчитывает несколько тысячелетий и включает в себя сложное переплетение культур различных народов и государств.</p>
+        <img src="images/5.jpg" alt="Республика Тыва" />
+        
+        <section>
+            <h3>Древняя история</h3>
+            <p>На территории республики Тува историком и археологом С. Н. Астаховым выделен ашельский пласт памятников раннего палеолита (местонахождение Торгалык А севернее озера Убса-Нур около посёлка Торгалыг, Торгалыг 1, Торгалыг Б, Тель 1 около реки Тес-Хем). В среднем палеолите им описаны леваллуа-мустьерские комплексы в долине рек Саглы, Хандагайты, Чоза, Торгалыг, Ирбитей, Тес-Хем и галечная индустрия в районе Ирбитея и Пестуновки). К верхнему палеолиту Тувы Астахов отнёс улугхемские, хемчикские и саглынские группировки памятников.
+
+                <p>Начиная с I тысячелетия до н. э. индоевропейские кочевники (скифы) доминировали на территории современной Тувы, затем сюда проникли тюркские племена.</p></p>
+        </section>
+
+        <section>
+            <h3>Средние века</h3>
+            <p>В Средние века территория Тывы находилась на пересечении торговых путей между Восточной Азией и Сибирью. Постепенно регион оказался под влиянием Монгольской империи, а затем стал частью различных монгольских ханств.</p>
+        </section>
+
+        <section>
+            <h3>Новое время</h3>
+            <p>В 1757 году Тыва становится частью Цинской империи, но уже в начале XX века регион оказался в орбите Российской Империи. В 1914 году был образован Урянхайский край.</p>
+            <img src="images/6.jpg" alt="Республика Тыва" />
+        </section>
+
+        <section>
+            <h3>Советский период</h3>
+            <p>В 1921 году была провозглашена Тувинская Народная Республика, получившая признание Советской России. В 1944 году Тыва вошла в состав СССР и начала активно развивать экономику и инфраструктуру.</p>
+            <img src="images/7.jfif" alt="Республика Тыва" />
+        </section>
+
+        <section>
+            <h3>Современность</h3>
+            <p>Сегодня Республика Тыва — это динамично развивающийся регион в составе Российской Федерации, известный своими уникальными природными ресурсами, богатой культурой и традициями.</p>
+        </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Республика Тыва. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu(event) {
+            const nav = document.getElementById('nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

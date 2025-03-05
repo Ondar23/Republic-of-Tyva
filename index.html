@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Республика Тыва</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+        #info p {
+            line-height: 1.4; 
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+        
+    </style>
+</head>
+<body onclick="closeMenu(event)">
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Логотип Республика Тыва">
+            <h1>Республика Тыва</h1>
+        </div>        
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" onclick="closeMenu(event)">Главная</a></li>
+            <li><a href="history.html" target="_self" onclick="closeMenu(event)">История</a></li>
+            <li><a href="culture.html" target="_self" onclick="closeMenu(event)">Культура</a></li>
+            <li><a href="symbols.html" target="_self" onclick="closeMenu(event)">Символика, гимн</a></li>
+            <li><a href="population.html" target="_self" onclick="closeMenu(event)">Население</a></li>
+            <li><a href="administration.html" target="_self" onclick="closeMenu(event)">Административно-территориальное деление</a></li>
+            <li><a href="sights.html" target="_self" onclick="closeMenu(event)">Достопримечательности</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div id="info">
+                <div>
+                    <h2>Главная</h2>
+                    <p class="first"><strong>Республика Тыва — субъект Российской Федерации, расположенный на юге Восточной Сибири, в верховьях Енисея.</strong></p>
+                    <img src="images/1.jpg" alt="Республика Тыва" />
+                    <p><strong>Столица</strong> — город Кызыл.</p>
+                    <p>
+                        Граничит на юге с Монголией, на западе — с Республикой Алтай, на севере — с Хакасией и Красноярским краем, на северо-востоке — с Иркутской областью, на востоке — с Бурятией.
+                    </p>
+                    <img src="images/2.png" alt="Республика Тыва" />
+                    <p>
+                        Общая площадь территории — 168 604 км². Климат резко континентальный. Лето умеренно тёплое в горах и жаркое в котловинах. Среднегодовая температура воздуха —  −5,5 °C.
+                    </p>
+                    <p>
+                        Земли региона богаты ископаемыми, поэтому наиболее развита добывающая промышленность: добыча каменного угля, цветных и редкоземельных металлов. Основные отрасли обрабатывающей промышленности — пищевая, лесная, лёгкая промышленность и производство строительных материалов.
+                    </p>
+                    <img src="images/3.jpg" alt="Республика Тыва" />
+                    <p>
+                        В сельском хозяйстве животноводство является ведущей и традиционной отраслью. Наиболее развито мясомолочное скотоводство, овцеводство, коневодство, а также в восточных и южных районах республики разводят северных оленей и верблюдов.
+                    </p>
+                    <img src="images/4.jpg" alt="Республика Тыва" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Республика Тыва. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation();
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMenu(event) {
+            const nav = document.getElementById('nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
