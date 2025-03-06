@@ -12,6 +12,8 @@ header {
     padding: 5px;
     display: flex;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .menu-toggle {
@@ -35,8 +37,7 @@ header {
     height: auto;
     margin-right: 30px;
     border-radius: 8px;
-    max-width: 100%; /* Оптимизация для адаптивности */
-    height: auto;    /* Автоматическая регулировка высоты */
+    max-width: 100%;
 }
 
 nav {
@@ -80,6 +81,7 @@ footer {
     color: #ffffff;
     position: relative;
     width: 100%;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -87,8 +89,31 @@ h2 {
     font-family: Arial, sans-serif;
     border-bottom: 2px solid #DDD;
     padding-bottom: 10px;
+    font-size: 24px; /* Размер шрифта заголовка */
 }
 
+#info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#info img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+#info p {
+    line-height: 1.4;
+}
+
+#info p.first {
+    font-size: 1.2em;
+}
+
+/* Адаптивный дизайн для экранов шириной меньше 768px */
 @media (max-width: 768px) {
     nav {
         width: 100%;
@@ -101,10 +126,28 @@ h2 {
 
     .logo img {
         width: 80px;
-        margin-right: 20px; /* Уменьшение отступа для мобильных */
+        margin-right: 20px;
+    }
+
+    h2 {
+        font-size: 20px; /* Уменьшаем размер шрифта заголовка */
     }
 
     main {
         padding: 10px;
+    }
+
+    #info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #info img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #info p.first {
+        font-size: 1em;
     }
 }
