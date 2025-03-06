@@ -6,15 +6,14 @@
     <title>Республика Тыва</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-       <style>
-       header {
+     header {
     background: #35424a;
     color: #ffffff;
     padding: 5px;
     display: flex;
     align-items: center;
-    width: 100%; /* Устанавливаем ширину на 100% */
-    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer {
@@ -23,44 +22,59 @@ footer {
     background: #35424a;
     color: #ffffff;
     position: relative;
-    width: 100%; /* Устанавливаем ширину на 100% */
-    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+    width: 100%;
+    box-sizing: border-box;
 }
 
-    #info img {
-        max-width: 100%; /* Изображение будет адаптироваться к ширине контейнера */
-        height: auto;
-        margin-right: 20px;
-    }
+#info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+}
 
-    #info p {
-        line-height: 1.4;
-    }
-    #info p.first {
-        font-size: 1.2em;
-    }
+#info img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    flex: 0 0 auto; /* Изображение не будет сжиматься или расти */
+}
 
+#info p {
+    line-height: 1.4;
+}
+
+#info p.first {
+    font-size: 1.2em;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Адаптивный дизайн для экранов шириной меньше 768px */
+@media (max-width: 768px) {
     main {
-        margin: 0 auto; /* Центрируем содержимое */
-        max-width: 800px; /* Ограничиваем максимальную ширину */
-        padding: 0 20px;  /* Добавляем внутренние отступы */
+        margin: 0;
+        padding: 0 10px;
     }
 
-    /* Адаптивный дизайн для экранов шириной меньше 768px */
-    @media (max-width: 768px) {
-        main {
-            margin: 0; /* Убираем внешние отступы */
-            padding: 0 10px; /* Уменьшаем внутренние отступы */
-        }
-
-        #info img {
-            margin-right: 10px; /* Уменьшаем отступы для изображения */
-        }
-
-        #info p.first {
-            font-size: 1em; /* Уменьшаем шрифт на более узких экранах */
-        }
+    #info {
+        flex-direction: column; /* Размещаем элементы вертикально */
+        align-items: flex-start; /* Выравниваем элементы по левому краю */
     }
+
+    #info img {
+        margin-right: 0; /* Убираем отступ для изображения */
+        margin-bottom: 10px; /* Добавляем нижний отступ для изображения */
+    }
+
+    #info p.first {
+        font-size: 1em;
+    }
+}
+
 </style>
 
     </style>
