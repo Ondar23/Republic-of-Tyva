@@ -6,87 +6,82 @@
     <title>Республика Тыва</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-     html, body {
+    html, body {
     width: 100%;
     overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-    box-sizing: border-box; /* Гарантирует, что паддинг и границы рассчитываются внутри ширины и высоты */
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Убираем лишние отступы */
+    padding: 0; /* Убираем отступы у body */
+    box-sizing: border-box; /* Упрощаем расчет размеров элементов */
 }
 
 #info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 20px;
-    width: 100%; /* Гарантируем, что ширина контейнера не выйдет за пределы */
+    margin: 20px 0; /* Добавляем вертикальный отступ только сверху и снизу */
+    width: 100%; /* Ограничиваем ширину для адаптивности */
 }
 
 #info img {
-    max-width: 100%;
+    max-width: 100%; /* Адаптивность изображений */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Уменьшаем нижний отступ для изображения */
 }
 
 #info p {
-    line-height: 1.4;
-    word-wrap: break-word; /* Предотвращает вылет длинных слов */
+    line-height: 1.5; /* Улучшаем читаемость текста */
+    margin: 0; /* Убираем лишние отступы */
 }
 
 #info p.first {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Чуть меньше текста для мобильных */
 }
 
 main {
-    margin: 0 20px;
-    max-width: 100%;
+    margin: 0 15px; /* Сокращаем боковые отступы */
     padding: 0;
-    box-sizing: border-box; /* Учитываем паддинг и границы */
+    box-sizing: border-box;
+    width: calc(100% - 30px); /* Учитываем отступы */
 }
 
 .sight-item {
     border-bottom: 1px solid #ccc;
-    padding: 20px 0;
-    width: 100%; /* Устанавливаем ширину для контейнера */
+    padding: 15px 0; /* Уменьшаем отступы у элементов */
+    width: 100%;
 }
 
 .sight-item h3 {
-    margin-top: 0;
-    word-wrap: break-word; /* Предотвращает вылет длинных заголовков */
+    margin: 0;
+    word-wrap: break-word; /* Предотвращаем вылет длинного текста */
 }
 
 .sight-item img {
-    max-width: 100%;
+    max-width: 100%; /* Адаптивность изображений */
     height: auto;
     border-radius: 8px;
-    margin-top: 15px;
+    margin-top: 10px; /* Уменьшаем верхний отступ */
 }
 
 .sight-item p {
     line-height: 1.5;
-    margin: 15px 0;
-    word-wrap: break-word; /* Предотвращает вылет длинных слов */
+    margin: 10px 0; /* Оптимальные отступы */
+    word-wrap: break-word;
 }
 
 /* Адаптивный дизайн для экранов шириной меньше 768px */
 @media (max-width: 768px) {
     main {
-        margin: 0; /* Убираем боковые отступы на мобильных */
-        padding: 0 10px;
-    }
-
-    #info {
-        flex-direction: column;
-        align-items: flex-start;
+        margin: 0; /* Полностью убираем боковые отступы */
+        padding: 0;
+        width: 100%;
     }
 
     #info img {
-        margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Обеспечиваем доступность контента */
     }
 
     #info p.first {
-        font-size: 1em;
+        font-size: 1em; /* Минимальный шрифт для мобильных */
     }
 }
 
