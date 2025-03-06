@@ -6,6 +6,75 @@
     <title>Республика Тыва</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+}
+
+#info img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    flex: 0 0 auto; /* Изображение не будет сжиматься или расти */
+}
+
+#info p {
+    line-height: 1.4;
+}
+
+#info p.first {
+    font-size: 1.2em;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Адаптивный дизайн для экранов шириной меньше 768px */
+@media (max-width: 768px) {
+    main {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    #info {
+        flex-direction: column; /* Размещаем элементы вертикально */
+        align-items: flex-start; /* Выравниваем элементы по левому краю */
+    }
+
+    #info img {
+        margin-right: 0; /* Убираем отступ для изображения */
+        margin-bottom: 10px; /* Добавляем нижний отступ для изображения */
+    }
+
+    #info p.first {
+        font-size: 1em;
+    }
+}
+
 <body onclick="closeMenu(event)">
     <header>
         <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
