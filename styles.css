@@ -10,7 +10,7 @@ header {
     background: #35424a;
     color: #ffffff;
     padding: 5px;
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
@@ -20,42 +20,38 @@ header {
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center; 
-    flex-grow: 1; 
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .logo img {
     width: 100px;
     height: auto;
     margin-right: 30px;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 nav {
     position: fixed;
     top: 0;
-    left: -200px; 
+    left: -200px;
     width: 200px;
     height: 100%;
     background: #35424a;
     transition: left 0.3s;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 60px; 
-}
-
-nav ul li {
-    display: block; 
+    margin-top: 60px;
 }
 
 nav ul li a {
@@ -66,11 +62,13 @@ nav ul li a {
 }
 
 nav.active {
-    left: 0; 
+    left: 0;
 }
 
 main {
     padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 footer {
@@ -81,74 +79,29 @@ footer {
     position: relative;
     width: 100%;
 }
+
 h2 {
     color: #333;
     font-family: Arial, sans-serif;
-    border-bottom: 2px solid #DDD; 
-    padding-bottom: 10px; 
+    border-bottom: 2px solid #DDD;
+    padding-bottom: 10px;
 }
+
 @media (max-width: 768px) {
-    header {
-        flex-direction: row; /* Сохраняем горизонтальную компоновку */
+    nav {
+        width: 100%;
+        left: -100%;
     }
 
     .menu-toggle {
-        font-size: 18px; /* Уменьшаем размер значка */
+        font-size: 18px;
     }
 
     .logo img {
-        width: 80px; /* Уменьшаем размер логотипа */
-    }
-
-    nav {
-        width: 100%; /* Меню занимает всю ширину экрана */
-        height: 100%; /* Покрывает весь экран */
-        left: -100%; /* Скрыто по умолчанию */
-        transition: left 0.3s ease;
-    }
-
-    nav.active {
-        left: 0; /* Открываем меню */
+        width: 80px;
     }
 
     main {
-        margin-top: 60px; /* Отступ для нормального размещения под header */
+        padding: 10px;
     }
-
-    nav ul {
-        margin-top: 20px; /* Сокращаем отступ сверху */
-    }
-
-    nav ul li a {
-        padding: 15px; /* Делаем ссылки более крупными для удобства клика */
-        font-size: 18px; /* Крупнее текст */
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-toggle {
-        font-size: 20px; /* Чуть больше размер для маленьких экранов */
-    }
-
-    .logo img {
-        width: 60px; /* Дополнительное уменьшение логотипа */
-        margin-right: 15px;
-    }
-
-    nav ul li a {
-        font-size: 16px; /* Еще немного уменьшаем текст для маленьких экранов */
-    }
-}
-
-}
-header, footer {
-    text-align: center;
-}
-
-main {
-    text-align: center; /* Делает весь текст в основном блоке по центру */
-}
-
-nav ul li a {
-    text-align: center; /* Центрирует текст в ссылках меню */
 }
