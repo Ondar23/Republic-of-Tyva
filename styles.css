@@ -141,3 +141,14 @@ h2 {
 }
 
 }
+header, footer {
+    text-align: center;
+}
+
+main {
+    text-align: center; /* Делает весь текст в основном блоке по центру */
+}
+
+nav ul li a {
+    text-align: center; /* Центрирует текст в ссылках меню */
+}
