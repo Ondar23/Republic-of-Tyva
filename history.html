@@ -6,7 +6,7 @@
     <title>Республика Тыва</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-    html, body {
+   html, body {
     width: 100%;
     overflow-x: hidden; /* Убираем горизонтальную прокрутку */
     margin: 0; /* Убираем лишние отступы */
@@ -48,6 +48,7 @@ main {
     border-bottom: 1px solid #ccc;
     padding: 15px 0; /* Уменьшаем отступы у элементов */
     width: 100%;
+    text-align: left; /* По умолчанию текст слева */
 }
 
 .sight-item h3 {
@@ -76,6 +77,10 @@ main {
         width: 100%;
     }
 
+    #info {
+        align-items: flex-start; /* Контент выравнивается по левому краю на телефоне */
+    }
+
     #info img {
         margin-bottom: 10px; /* Обеспечиваем доступность контента */
     }
@@ -84,6 +89,29 @@ main {
         font-size: 1em; /* Минимальный шрифт для мобильных */
     }
 }
+
+/* Дизайн для экранов шире 768px (например, компьютеры) */
+@media (min-width: 768px) {
+    main {
+        margin: 0 auto; /* Центрируем основной контент */
+        padding: 0 20px; /* Добавляем боковые отступы */
+        max-width: 900px; /* Ограничиваем максимальную ширину */
+    }
+
+    #info {
+        align-items: center; /* Центрируем всю секцию info */
+        text-align: center; /* Центрируем текст внутри info */
+    }
+
+    .sight-item {
+        text-align: center; /* Центрируем текст и контент в sight-item */
+    }
+
+    .sight-item img {
+        margin: 20px auto; /* Центрируем изображение для компьютеров */
+    }
+}
+
 
     </style>
 </head>
