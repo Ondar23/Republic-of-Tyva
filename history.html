@@ -6,113 +6,64 @@
     <title>Республика Тыва</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-   html, body {
-    width: 100%;
-    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-    margin: 0; /* Убираем лишние отступы */
-    padding: 0; /* Убираем отступы у body */
-    box-sizing: border-box; /* Упрощаем расчет размеров элементов */
-}
-
-#info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px 0; /* Добавляем вертикальный отступ только сверху и снизу */
-    width: 100%; /* Ограничиваем ширину для адаптивности */
-}
-
-#info img {
-    max-width: 100%; /* Адаптивность изображений */
-    height: auto;
-    margin-bottom: 10px; /* Уменьшаем нижний отступ для изображения */
-}
-
-#info p {
-    line-height: 1.5; /* Улучшаем читаемость текста */
-    margin: 0; /* Убираем лишние отступы */
-}
-
-#info p.first {
-    font-size: 1.1em; /* Чуть меньше текста для мобильных */
-}
-
-main {
-    margin: 0 15px; /* Сокращаем боковые отступы */
-    padding: 0;
-    box-sizing: border-box;
-    width: calc(100% - 30px); /* Учитываем отступы */
-}
-
-.sight-item {
-    border-bottom: 1px solid #ccc;
-    padding: 15px 0; /* Уменьшаем отступы у элементов */
-    width: 100%;
-    text-align: left; /* По умолчанию текст слева */
-}
-
-.sight-item h3 {
-    margin: 0;
-    word-wrap: break-word; /* Предотвращаем вылет длинного текста */
-}
-
-.sight-item img {
-    max-width: 100%; /* Адаптивность изображений */
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px; /* Уменьшаем верхний отступ */
-}
-
-.sight-item p {
-    line-height: 1.5;
-    margin: 10px 0; /* Оптимальные отступы */
-    word-wrap: break-word;
-}
-
+     
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+        #info p {
+            line-height: 1.4; 
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+        .sight-item {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+        }
+        .sight-item h3 {
+            margin-top: 0;
+        }
+        .sight-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .sight-item p {
+            line-height: 1.5;
+            margin: 15px 0;
+        }
 /* Адаптивный дизайн для экранов шириной меньше 768px */
 @media (max-width: 768px) {
     main {
-        margin: 0; /* Полностью убираем боковые отступы */
-        padding: 0;
-        width: 100%;
+        margin: 0;
+        padding: 0 10px;
     }
 
     #info {
-        align-items: flex-start; /* Контент выравнивается по левому краю на телефоне */
+        flex-direction: column; /* Размещаем элементы вертикально */
+        align-items: flex-start; /* Выравниваем элементы по левому краю */
     }
 
     #info img {
-        margin-bottom: 10px; /* Обеспечиваем доступность контента */
+        margin-right: 0; /* Убираем отступ для изображения */
+        margin-bottom: 10px; /* Добавляем нижний отступ для изображения */
     }
 
     #info p.first {
-        font-size: 1em; /* Минимальный шрифт для мобильных */
+        font-size: 1em;
     }
 }
-
-/* Дизайн для экранов шире 768px (например, компьютеры) */
-@media (min-width: 768px) {
-    main {
-        margin: 0 auto; /* Центрируем основной контент */
-        padding: 0 20px; /* Добавляем боковые отступы */
-        max-width: 900px; /* Ограничиваем максимальную ширину */
-    }
-
-    #info {
-        align-items: center; /* Центрируем всю секцию info */
-        text-align: center; /* Центрируем текст внутри info */
-    }
-
-    .sight-item {
-        text-align: center; /* Центрируем текст и контент в sight-item */
-    }
-
-    .sight-item img {
-        margin: 20px auto; /* Центрируем изображение для компьютеров */
-    }
-}
-
-
     </style>
 </head>
 <body onclick="closeMenu(event)">
