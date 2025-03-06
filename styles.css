@@ -35,6 +35,8 @@ header {
     height: auto;
     margin-right: 30px;
     border-radius: 8px;
+    max-width: 100%; /* Оптимизация для адаптивности */
+    height: auto;    /* Автоматическая регулировка высоты */
 }
 
 nav {
@@ -68,7 +70,7 @@ nav.active {
 main {
     padding: 20px;
     margin: 0 auto;
-    max-width: 1000px; /* Увеличено для лучшего отображения на десктопах */
+    max-width: 1000px;
 }
 
 footer {
@@ -99,6 +101,7 @@ h2 {
 
     .logo img {
         width: 80px;
+        margin-right: 20px; /* Уменьшение отступа для мобильных */
     }
 
     main {
