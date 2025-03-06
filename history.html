@@ -6,21 +6,31 @@
     <title>Республика Тыва</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-       #info {
+     html, body {
+    width: 100%;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+    box-sizing: border-box; /* Гарантирует, что паддинг и границы рассчитываются внутри ширины и высоты */
+    margin: 0;
+    padding: 0;
+}
+
+#info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 20px;
+    width: 100%; /* Гарантируем, что ширина контейнера не выйдет за пределы */
 }
 
 #info img {
-    max-width: 100%; /* Делаем изображение полностью адаптивным */
+    max-width: 100%;
     height: auto;
-    margin-bottom: 20px; /* Добавляем нижний отступ для изображения */
+    margin-bottom: 20px;
 }
 
 #info p {
     line-height: 1.4;
+    word-wrap: break-word; /* Предотвращает вылет длинных слов */
 }
 
 #info p.first {
@@ -28,17 +38,21 @@
 }
 
 main {
-    margin: 0 20px; /* Делаем отступы меньше для большего пространства содержимого */
-    max-width: 100%; /* Ограничиваем максимальную ширину для адаптивности */
+    margin: 0 20px;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box; /* Учитываем паддинг и границы */
 }
 
 .sight-item {
     border-bottom: 1px solid #ccc;
     padding: 20px 0;
+    width: 100%; /* Устанавливаем ширину для контейнера */
 }
 
 .sight-item h3 {
     margin-top: 0;
+    word-wrap: break-word; /* Предотвращает вылет длинных заголовков */
 }
 
 .sight-item img {
@@ -51,6 +65,7 @@ main {
 .sight-item p {
     line-height: 1.5;
     margin: 15px 0;
+    word-wrap: break-word; /* Предотвращает вылет длинных слов */
 }
 
 /* Адаптивный дизайн для экранов шириной меньше 768px */
@@ -61,17 +76,17 @@ main {
     }
 
     #info {
-        flex-direction: column; /* Элементы располагаются вертикально */
-        align-items: flex-start; /* Выравнивание по левому краю */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     #info img {
-        margin-right: 0; /* Отступ для изображения убирается */
-        margin-bottom: 10px; /* Добавляем нижний отступ для изображения */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     #info p.first {
-        font-size: 1em; /* Уменьшаем размер шрифта для мобильных */
+        font-size: 1em;
     }
 }
 
