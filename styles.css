@@ -86,29 +86,9 @@ h2 {
     padding-bottom: 10px; 
 }
 main {
-    margin: 0 20px;
-    max-width: 100%;
-    padding: 0;
-    box-sizing: border-box; /* Учитываем паддинг и границы */
+    padding: 20px;
 }
 
-.sight-item {
-    border-bottom: 1px solid #ccc;
-    padding: 20px 0;
-    width: 100%; /* Устанавливаем ширину для контейнера */
-}
-
-.sight-item h3 {
-    margin-top: 0;
-    word-wrap: break-word; /* Предотвращает вылет длинных заголовков */
-}
-
-.sight-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 15px;
-}
 
 .sight-item p {
     line-height: 1.5;
