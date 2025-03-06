@@ -87,17 +87,3 @@ h2 {
     border-bottom: 2px solid #DDD; 
     padding-bottom: 10px; 
 }
-@media (max-width: 768px) {
-    nav {
-        width: 100%; 
-        left: -100%; 
-    }
-
-    .menu-toggle {
-        font-size: 18px; 
-    }
-
-    .logo img {
-        width: 80px; 
-    }
-}
