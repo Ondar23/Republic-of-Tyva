@@ -43,6 +43,27 @@
             line-height: 1.5;
             margin: 15px 0;
         }
+/* Адаптивный дизайн для экранов шириной меньше 768px */
+@media (max-width: 768px) {
+    main {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    #info {
+        flex-direction: column; /* Размещаем элементы вертикально */
+        align-items: flex-start; /* Выравниваем элементы по левому краю */
+    }
+
+    #info img {
+        margin-right: 0; /* Убираем отступ для изображения */
+        margin-bottom: 10px; /* Добавляем нижний отступ для изображения */
+    }
+
+    #info p.first {
+        font-size: 1em;
+    }
+}
     </style>
 </head>
 <body onclick="closeMenu(event)">
