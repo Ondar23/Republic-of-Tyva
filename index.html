@@ -7,53 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
     <style>
-    header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#info {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
-}
-
-#info img {
-    max-width: 100%;
-    height: auto;
-    margin-right: 20px;
-    flex: 0 0 auto; /* Изображение не будет сжиматься или расти */
-}
-
-#info p {
-    line-height: 1.4;
-}
-
-#info p.first {
-    font-size: 1.2em;
-}
-
-main {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
+   
+        #info {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #info img {
+            max-width: 600px; 
+            height: auto;
+            margin-right: 20px; 
+        }
+        #info p {
+            line-height: 1.4; 
+        }
+        #info p.first {
+            font-size: 1.2em;
+        }
+        main {
+            margin: 0 400px; 
+        }
+        .sight-item {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+        }
+        .sight-item h3 {
+            margin-top: 0;
+        }
+        .sight-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .sight-item p {
+            line-height: 1.5;
+            margin: 15px 0;
+        }
 /* Адаптивный дизайн для экранов шириной меньше 768px */
 @media (max-width: 768px) {
     main {
