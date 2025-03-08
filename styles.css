@@ -94,7 +94,7 @@ h2 {
 #info {
     display: flex;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 0;
     flex-wrap: wrap; /* Позволяет элементам переноситься */
 }
 
