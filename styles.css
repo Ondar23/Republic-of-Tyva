@@ -88,7 +88,28 @@ h2 {
 main {
     padding: 20px;
 }
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.5em;
+    }
 
+    .text {
+        font-size: 1em;
+    }
+
+    .footer-text {
+        font-size: 0.8em;
+    }
+
+    .logo img {
+        width: 40px; /* Изменение размеров изображения на мобильных */
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.2em; /* Изменение размера текста на мобильных */
+    }
+}
 
 .sight-item p {
     line-height: 1.5;
