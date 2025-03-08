@@ -103,8 +103,6 @@ h2 {
     height: auto;
     margin-right: 20px;
     margin-bottom: 20px; /* Отступ снизу для изображений */
-    display: block;
-  margin: 0 auto;
 }
 
 #info p {
