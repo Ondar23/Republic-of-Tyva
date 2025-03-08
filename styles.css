@@ -69,7 +69,11 @@ nav.active {
     left: 0; 
 }
 
-
+main {
+    padding: 20px;
+    margin: 0 auto; /* Центрирование main на больших экранах */
+    max-width: 1000px; /* Ограничение ширины для удобства чтения */
+}
 
 footer {
     text-align: center;
@@ -79,16 +83,49 @@ footer {
     position: relative;
     width: 100%;
 }
+
 h2 {
     color: #333;
     font-family: Arial, sans-serif;
     border-bottom: 2px solid #DDD; 
     padding-bottom: 10px; 
 }
-main {
-    padding: 20px;
+
+#info {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Позволяет элементам переноситься */
 }
+
+#info img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px; /* Отступ снизу для изображений */
+}
+
+#info p {
+    line-height: 1.4;
+    margin: 15px 0;
+    flex: 1; /* Растягивает абзац на всю ширину контейнера */
+}
+
+#info p.first {
+    font-size: 1.2em;
+}
+
+/* Адаптивность для мобильных устройств */
 @media (max-width: 600px) {
+    #info {
+        flex-direction: column; /* Переключение на вертикальную колонку */
+        align-items: center; /* Центрирование контента */
+    }
+
+    #info img {
+        margin-right: 0; /* Убираем отступ справа */
+    }
+
     .title {
         font-size: 1.5em;
     }
@@ -103,15 +140,14 @@ main {
 
     .logo img {
         width: 40px; /* Изменение размеров изображения на мобильных */
-        height: 40px;
+        height: auto;
     }
 
     .logo h1 {
         font-size: 1.2em; /* Изменение размера текста на мобильных */
     }
+    
+    main {
+        padding: 10px; /* Уменьшение отступа по краям */
+    }
 }
-
-.sight-item p {
-    line-height: 1.5;
-    margin: 15px 0;
-    word-wrap: break-word;
