@@ -140,7 +140,7 @@ h2 {
 
     .logo img {
         width: 40px; /* Изменение размеров изображения на мобильных */
-        height: auto;
+        height: 40px;
     }
 
     .logo h1 {
