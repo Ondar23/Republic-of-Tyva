@@ -99,7 +99,7 @@ h2 {
 }
 
 #info img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     margin-right: 20px;
     margin-bottom: 20px; /* Отступ снизу для изображений */
@@ -139,7 +139,7 @@ h2 {
     }
 
     .logo img {
-        width: 20px; /* Изменение размеров изображения на мобильных */
+        width: 40px; /* Изменение размеров изображения на мобильных */
         height: auto;
     }
 
