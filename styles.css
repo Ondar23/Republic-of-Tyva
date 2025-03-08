@@ -71,8 +71,8 @@ nav.active {
 
 main {
     padding: 20px;
-    margin: 0 auto; /* Центрирование main на больших экранах */
-    max-width: 1000px; /* Ограничение ширины для удобства чтения */
+    margin: 0 auto; 
+    max-width: 1000px;
 }
 
 footer {
@@ -95,35 +95,34 @@ h2 {
     display: flex;
     align-items: flex-start;
     margin-top: 0;
-    flex-wrap: wrap; /* Позволяет элементам переноситься */
+    flex-wrap: wrap; 
 }
 
 #info img {
     max-width: 100%;
     height: auto;
     margin-right: 20px;
-    margin-bottom: 20px; /* Отступ снизу для изображений */
+    margin-bottom: 20px; 
 }
 
 #info p {
     line-height: 1.4;
     margin: 15px 0;
-    flex: 1; /* Растягивает абзац на всю ширину контейнера */
+    flex: 1; /
 }
 
 #info p.first {
     font-size: 1.2em;
 }
 
-/* Адаптивность для мобильных устройств */
 @media (max-width: 600px) {
     #info {
-        flex-direction: column; /* Переключение на вертикальную колонку */
-        align-items: center; /* Центрирование контента */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     #info img {
-        margin-right: 0; /* Убираем отступ справа */
+        margin-right: 0; 
     }
 
     .title {
@@ -139,15 +138,15 @@ h2 {
     }
 
     .logo img {
-        width: 40px; /* Изменение размеров изображения на мобильных */
+        width: 40px; 
         height: auto;
     }
 
     .logo h1 {
-        font-size: 1.2em; /* Изменение размера текста на мобильных */
+        font-size: 1.2em; 
     }
     
     main {
-        padding: 10px; /* Уменьшение отступа по краям */
+        padding: 10px;
     }
 }
